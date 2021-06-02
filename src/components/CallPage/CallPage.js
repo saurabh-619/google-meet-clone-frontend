@@ -14,7 +14,7 @@ import { getRequest, postRequest } from "./../../utils/apiRequest";
 import { BASE_URL, SAVE_CALL_ID, GET_CALL_ID } from "../../utils/apiEndpoints";
 
 let peer = null;
-const socket = io.connect("http://localhost:4000", {
+const socket = io.connect(BASE_URL, {
   transports: ["websocket", "polling", "flashsocket"],
 });
 const initialState = [];
